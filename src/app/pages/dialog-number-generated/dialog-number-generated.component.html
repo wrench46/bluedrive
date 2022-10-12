@@ -1,0 +1,38 @@
+<h4 mat-dialog-title>
+    <mat-toolbar role="toolbar" [ngClass]="dialog_class">
+        <span class="modal-btn-close" class="modal-header-title">{{header_title}}</span>
+        <span class="fx-spacer"></span>
+        <button mat-icon-button (click)="close()" [disabled]="api_call">
+            <mat-icon mat-list-icon class="modal-btn-close" >close</mat-icon>
+        </button>
+    </mat-toolbar>
+</h4>
+
+<div mat-dialog-content class="cfm-modal-message">
+
+    <!-- <p [class.hide]="api_call" style="text-align: center; font-size: 16px;" [innerHTML]="dialog_message"></p> -->
+    <div [class.hide]="api_call" class="cfm-child"><p style="font-size: 16px;" [innerHTML]="dialog_message"></p></div>
+
+    <div class="process-spinner delete-spinner-color" [class.hide]="!api_call"> 
+        <mat-spinner class="mat-dialog-spinner" [diameter]="50" [ngClass]="spinner_class"></mat-spinner>  
+        <p>{{api_call_mesage}}</p>
+    </div>
+  
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end start">
+    
+    <button 
+    mat-raised-button 
+    color="warn" (click)="close()" 
+    [disabled]="api_call">
+    Close</button>
+
+    <!-- <button 
+        mat-raised-button 
+        color="primary"  
+        [disabled]="api_call" 
+        (click)="confirmation()" 
+        *ngIf="show_yes_confirm" >
+        {{yes_confirm}}</button> -->
+
+</div>

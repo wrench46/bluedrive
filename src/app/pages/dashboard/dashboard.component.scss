@@ -1,0 +1,74 @@
+.fw-400{
+  font-weight: 400;
+}
+
+.hide-div{
+  display:none;
+}
+
+.process-spinner{
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user-form .mat-form-field{
+  width: 100%;
+  margin-bottom: -1.34375em;
+}
+.back-btn{
+  position: relative;
+  top: -25px;
+}
+
+.fieldset-wrapper{
+  padding: 10px; 
+  border:1px solid #ccc; 
+  margin-top:15px;
+}
+
+.api_errors{
+  text-align: center;
+}
+
+.span-req{
+  color:red;
+}
+
+ngx-dropzone,
+.custom-dropzone {
+margin: 20px;
+}
+
+.custom-dropzone {
+height: 250px;
+background: #333;
+color: #fff;
+border: 5px dashed rgb(235, 79, 79);
+border-radius: 3px;
+font-size: 20px;
+margin: 5px 0 0 0!important;
+}
+
+
+.custom-dropzone.ngx-dz-hovered {
+border: 5px solid rgb(235, 79, 79);
+}
+.dz-label-file{
+bottom: 0!important;
+}
+.dz-preview{
+margin:0 auto!important;
+
+}
+
+.image-error{
+color:#ff5252;
+font-size: 75%;
+}
+
+.main-page-header-btn {
+// border: 1px red solid;
+width: 99px;
+margin: 5px;
+}

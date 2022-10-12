@@ -1,0 +1,25 @@
+<div fxLayout="column">
+    <div class="flex-p"> 
+        <mat-table #table [dataSource]="datasource" class="mat-elevation-z8">       
+            <ng-container matColumnDef="generator_user">
+                <mat-header-cell *matHeaderCellDef> Generator User </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.generator_user}} </mat-cell>
+            </ng-container>         
+            <ng-container matColumnDef="created">
+                <mat-header-cell *matHeaderCellDef> Created </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.created}} </mat-cell>
+            </ng-container>     
+            <ng-container matColumnDef="updated">
+                <mat-header-cell *matHeaderCellDef> Updated </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.updated}} </mat-cell>
+            </ng-container>        
+            <ng-container matColumnDef="value">
+                <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator #paginator [length]=length  [pageSize]="10" [pageSizeOptions]=pageSizeOptions (page)="pageEvent = getServerData($event)"></mat-paginator>
+    </div>
+</div>
